@@ -28,6 +28,7 @@ const theme = {
 		silverchalice: '#9d9d9d',
 		blueKlob: '#27356a',
 		veryLightBlue: '#edf1ff',
+		darkGreen: '#1A7E5A',
 	},
 };
 
