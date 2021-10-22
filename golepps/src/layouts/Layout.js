@@ -52,7 +52,7 @@ export default function Layout({ children, hideNavbar, pageMeta }) {
 			/>
 			{!hideNavbar && <NavBar />}
 			<ShowLgHideSm>
-				<div>
+				<div className="klob-max">
 					<main>{children}</main>
 					<Footer />
 				</div>
