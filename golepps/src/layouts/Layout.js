@@ -52,7 +52,7 @@ export default function Layout({ children, hideNavbar, pageMeta }) {
 			/>
 			{!hideNavbar && <NavBar />}
 			<ShowLgHideSm>
-				<div className="dashboard-main">
+				<div>
 					<main>{children}</main>
 					<Footer />
 				</div>
