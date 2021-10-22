@@ -53,14 +53,13 @@ export default function Layout({ children, hideNavbar, pageMeta }) {
 			{!hideNavbar && <NavBar />}
 			<main>
 				<ShowLgHideSm>
-					<div className="klob-max">
-						<div className="d-flex">
-							<div>
-								<div>{children}</div>
-								<Footer />
-							</div>
-						</div>
-					</div>
+					{/* <div className="d-flex"> */}
+					<div>{children}</div>
+					<Footer />
+					{/* </div> */}
+					{/* <div className="klob-max">
+							<div></div>
+					</div> */}
 				</ShowLgHideSm>
 				<HideLgShowSm>
 					<ErrorMobile />

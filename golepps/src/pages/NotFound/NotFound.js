@@ -7,7 +7,15 @@ const Landing = () => {
 	return (
 		<Layout>
 			<div className="klob-max klob-dashboard">
-				<div className="d-flex justify-content-center align-items-center">
+				<div
+					className="d-flex justify-content-center align-items-center"
+					style={{
+						height: '330px',
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'center',
+					}}
+				>
 					<Error404 />
 				</div>
 			</div>

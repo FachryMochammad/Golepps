@@ -1,5 +1,6 @@
 import React, { lazy, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Error500 from '../../components/Errors/Error500/Error500';
 import { getAction } from '../../services/axios/actions';
 import { pathListGolfCourse } from '../../services/axios/endpoints';
 
@@ -25,7 +26,7 @@ function FindGolfCourse() {
 			getAction({ url: pathListGolfCourse })
 				.then(({ data }) => {
 					dispatch({ type: 'SET_LIST_GOLF_COURSE', data: data });
-					setError(false);
+					setError(true);
 				})
 				.catch((err) => {
 					console.log(err);
@@ -43,6 +44,18 @@ function FindGolfCourse() {
 
 	return (
 		<Layout>
+			{error && (
+				<div
+					style={{
+						height: '330px',
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'center',
+					}}
+				>
+					<Error500 />
+				</div>
+			)}
 			{!error && (
 				<>
 					<Title />

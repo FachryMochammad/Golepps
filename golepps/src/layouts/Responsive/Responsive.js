@@ -1,12 +1,12 @@
-import React from "react";
-import { Col4LgCol12SmStyle } from "./styles/Col4LgCol12Sm";
-import { Col6LgCol12SmStyle } from "./styles/Col6LgCol12Sm";
-import { FlexColumnStyle } from "./styles/FlexColumn";
-import { FlexLgColumSmStyle } from "./styles/FlexLgColumnSm";
-import { FlexLgColumReverseSmStyle } from "./styles/FlexLgColumnReverseSm";
-import { GridLgColumnStyle } from "./styles/GridLgColumn";
-import { ShowLgHideSmStyle } from "./styles/ShowLgHideSm";
-import { HideLgShowSmStyle } from "./styles/HideLgShowSm";
+import React from 'react';
+import { Col4LgCol12SmStyle } from './styles/Col4LgCol12Sm';
+import { Col6LgCol12SmStyle } from './styles/Col6LgCol12Sm';
+import { FlexColumnStyle } from './styles/FlexColumn';
+import { FlexLgColumSmStyle } from './styles/FlexLgColumnSm';
+import { FlexLgColumReverseSmStyle } from './styles/FlexLgColumnReverseSm';
+import { GridLgColumnStyle } from './styles/GridLgColumn';
+import { ShowLgHideSmStyle } from './styles/ShowLgHideSm';
+import { HideLgShowSmStyle } from './styles/HideLgShowSm';
 
 export function Col4LgCol12Sm(props) {
 	return <Col4LgCol12SmStyle {...props}>{props.children}</Col4LgCol12SmStyle>;
