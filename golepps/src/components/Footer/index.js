@@ -1,9 +1,10 @@
 import React from 'react';
 import { ItemFoot, FooterKlob } from './styles';
+import { NavLink } from 'react-router-dom';
 import golepps from '../../assets/images/golepps-horizontal-2.png';
 import appstore from '../../assets/images/appstore-footer.png';
 import googlestore from '../../assets/images/googlestore-footer.png';
-import { P2Klob } from '../Atoms/Typography/Typography';
+import { P3Klob } from '../Atoms/Typography/Typography';
 
 const Footer = function ({ style }) {
 	return (
@@ -19,9 +20,11 @@ const Footer = function ({ style }) {
 					<div className="row m-0">
 						<div className="col-lg-3 col-md-12 text-center ">
 							<img src={golepps} alt="klob" className="img-logo-klob-footer" />
-							<P2Klob white bold className="mt-2">
-								Cari Lapangan
-							</P2Klob>
+							<NavLink to="/find-golf-course">
+								<P3Klob white className="mt-2">
+									Cari Lapangan
+								</P3Klob>
+							</NavLink>
 						</div>
 						<div className="col-lg-9 col-md-12">
 							<div className="row">
@@ -62,10 +65,10 @@ const Footer = function ({ style }) {
 						}}
 					>
 						<div style={{ textAlign: 'center' }}>
-							<P2Klob white className="mb-2">
+							<P3Klob white className="mb-2">
 								© 2021. All rights reserved.
-							</P2Klob>
-							<P2Klob white>Site developed by Jeinger</P2Klob>
+							</P3Klob>
+							<P3Klob white>Site developed by Jeinger</P3Klob>
 						</div>
 					</div>
 				</div>

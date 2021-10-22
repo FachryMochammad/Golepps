@@ -180,13 +180,18 @@ export const SectionLeft = styled.div`
 `;
 export const SectionMid = styled.div`
 	width: 50%;
+
+	.shift {
+		margin-left: 350px;
+	}
+
 	nav li a {
-		color: ${theme.color.darkSlateBlue};
+		color: black;
 	}
 	nav li > .active {
-		color: ${theme.color.darkSlateBlue};
+		color: black;
 		h3 {
-			border-bottom: solid 2px ${theme.color.secondary};
+			border-bottom: solid 2px ${theme.color.darkGreen};
 		}
 	}
 	@media (max-width: ${M_DEVICES_WIDTH}) {

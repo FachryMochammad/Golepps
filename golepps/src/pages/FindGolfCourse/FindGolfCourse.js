@@ -10,9 +10,9 @@ const TemukanLapanganGolf = lazy(() =>
 );
 
 function FindGolfCourse() {
-	const { listGolfCourse } = useSelector((state) => state.golfCourse);
-	// console.log(listGolfCourse);
-	const [loading, setLoading] = useState(false);
+	const { listGolfCourse, loadingSearch } = useSelector(
+		(state) => state.golfCourse
+	);
 	const [error, setError] = useState(false);
 
 	const dispatch = useDispatch();
@@ -22,20 +22,15 @@ function FindGolfCourse() {
 		let mounted = true;
 
 		if (mounted) {
-			if (!listGolfCourse) {
-				setLoading(true);
-				getAction({ url: pathListGolfCourse })
-					.then(({ data }) => {
-						// console.log(data, 'golf course');
-						dispatch({ type: 'SET_LIST_GOLF_COURSE', data: data });
-						setLoading(false);
-						setError(false);
-					})
-					.catch((err) => {
-						console.log(err);
-						setError(true);
-					});
-			}
+			getAction({ url: pathListGolfCourse })
+				.then(({ data }) => {
+					dispatch({ type: 'SET_LIST_GOLF_COURSE', data: data });
+					setError(false);
+				})
+				.catch((err) => {
+					console.log(err);
+					setError(true);
+				});
 		}
 		// memberikan efek scroll to top ketika masuk ke page ini
 		window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -52,7 +47,7 @@ function FindGolfCourse() {
 				<>
 					<Title />
 					<TemukanLapanganGolf
-						loading={loading}
+						loadingSearch={loadingSearch}
 						listGolfCourse={listGolfCourse}
 					/>
 				</>

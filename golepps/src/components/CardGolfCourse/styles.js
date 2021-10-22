@@ -6,6 +6,8 @@ export const Wrapper = styled.div`
 	.card {
 		transition: 0.1s;
 		-webkit-transition: all 0.5s;
+		border: none;
+		border-radius: 20px;
 	}
 
 	.card-image {
@@ -25,7 +27,7 @@ export const Wrapper = styled.div`
 		-webkit-transform: translate(0, -0.5em);
 	}
 
-	.game-title {
+	.course-name {
 		font-weight: 700;
 		word-wrap: break-word;
 		overflow: hidden;
@@ -35,25 +37,17 @@ export const Wrapper = styled.div`
 		-webkit-line-clamp: 1;
 	}
 
-	.game-title:hover {
+	.course-name:hover {
 		color: ${theme.color.darkGreen};
 		cursor: pointer;
 	}
 
-	.game-title.detail:hover {
+	.course-name.detail:hover {
 		color: white;
 		cursor: default;
 	}
 
-	.game-genre {
-		font-size: 0.8rem;
-		font-weight: 500;
-		background-color: #772ce8;
-		border-radius: 50px;
-		padding: 2px 7px;
-	}
-
-	.game-desc {
+	.course-city {
 		font-size: 0.9rem;
 		word-wrap: break-word;
 		overflow: hidden;
@@ -61,5 +55,11 @@ export const Wrapper = styled.div`
 		text-overflow: ellipsis;
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 5;
+	}
+
+	img {
+		border-radius: 20px 20px 0 0;
+		/* height: 400px; */
+		/* object-fit: cover; */
 	}
 `;

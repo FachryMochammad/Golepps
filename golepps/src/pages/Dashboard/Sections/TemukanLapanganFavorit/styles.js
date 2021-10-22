@@ -3,23 +3,24 @@ import styled from 'styled-components';
 import {
 	// L_DEVICES_WIDTH,
 	S_DEVICES_WIDTH,
-	XS_DEVICES_WIDTH,
+	// XS_DEVICES_WIDTH,
 	// M_DEVICES_WIDTH,
 } from '../../../../config/utils/constant';
 
 export const Wrapper = styled.div`
 	width: 100%;
-	height: 100vh;
-	padding: 0 60px;
+	/* height: 100vh; */
+	padding: 40px 60px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 
-	/* @media (max-width: ${S_DEVICES_WIDTH}) {
-		.klob-navbar {
-			height: 3rem;
-		}
-	} */
+	@media (max-width: ${S_DEVICES_WIDTH}) {
+		padding: 40px 0px;
+		width: 90%;
+		flex-direction: column;
+		align-items: center;
+	}
 `;
 
 export const TitleDiv = styled.div`
@@ -27,11 +28,11 @@ export const TitleDiv = styled.div`
 	height: 294px;
 	margin-left: 22px;
 
-	/* @media (max-width: ${S_DEVICES_WIDTH}) {
-    .klob-navbar {
-        height: 3rem;
-    }
-} */
+	@media (max-width: ${S_DEVICES_WIDTH}) {
+		display: flex;
+		flex-direction: column;
+		width: 230px;
+	}
 `;
 
 export const PhotoDiv = styled.div`
@@ -43,7 +44,7 @@ export const PhotoDiv = styled.div`
 		object-fit: contain;
 	}
 
-	/* @media (max-width: ${XS_DEVICES_WIDTH}) {
-		height: 32px;
-	} */
+	@media (max-width: ${S_DEVICES_WIDTH}) {
+		/* height: 100%; */
+	}
 `;

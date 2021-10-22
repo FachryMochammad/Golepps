@@ -1,15 +1,15 @@
 import React from 'react';
 // import { Link, useHistory, useLocation } from "react-router-dom";
 
-import { Link, NavLink } from 'react-router-dom';
-import { Wrapper, SectionLeft, WrapperHeader } from './styles';
+import { Link } from 'react-router-dom';
+import { Wrapper, SectionLeft } from './styles';
 import Hamburger from './Section/Hamburger/Hamburger';
 import LogoNavBar from '../Logo/LogoNavBar';
 import { HideLgShowSm } from '../../layouts/Responsive/Responsive';
-// import BeforeLogin from './BeforeLogin/BeforeLogin';
+import BeforeLogin from './BeforeLogin/BeforeLogin';
 // import AfterLogin from './AfterLogin/AfterLogin';
 // import { useSelector } from 'react-redux';
-import { H2Klob } from '../Atoms/Typography/Typography';
+// import { H2Klob } from '../Atoms/Typography/Typography';
 
 function NavBar() {
 	// const dispatch = useDispatch();
@@ -21,18 +21,18 @@ function NavBar() {
 			<div className="klob-max-navbar klob-navbar d-flex align-items-center justify-content-between m-auto">
 				{/* {console.log("stateGlobal di navbar", stateGlobal)} */}
 				<SectionLeft>
-					<Link to="/sad">
+					<Link to="/dashboard">
 						<LogoNavBar />
 					</Link>
 				</SectionLeft>
-				{/* {stateGlobal.isAuthenticated && <AfterLogin />}
-				{!stateGlobal.isAuthenticated && <BeforeLogin />} */}
+				{/* {stateGlobal.isAuthenticated && <AfterLogin />} */}
+				<BeforeLogin />
 
 				<HideLgShowSm>
 					<Hamburger />
 				</HideLgShowSm>
 			</div>
-			<HideLgShowSm>
+			{/* <HideLgShowSm>
 				<WrapperHeader>
 					<nav>
 						<ul>
@@ -50,7 +50,7 @@ function NavBar() {
 						</ul>
 					</nav>
 				</WrapperHeader>
-			</HideLgShowSm>
+			</HideLgShowSm> */}
 		</Wrapper>
 	);
 }

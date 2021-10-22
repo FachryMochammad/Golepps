@@ -1,5 +1,5 @@
 import React, { lazy, useEffect } from 'react';
-
+import { Wrapper } from './styles';
 const Layout = lazy(() => import('../../layouts/Layout'));
 const Title = lazy(() => import('./Sections/Title'));
 const TemukanLapanganFavorit = lazy(() =>
@@ -15,11 +15,15 @@ function Dashboard() {
 	}, []);
 	return (
 		<Layout>
-			<Title />
-			<TemukanLapanganFavorit />
-			<Scorecard />
-			<CatatJarakPukulan />
-			<BuatProfil />
+			<Wrapper>
+				<div className="klob-max m-auto">
+					<Title />
+					<TemukanLapanganFavorit />
+					<Scorecard />
+					<CatatJarakPukulan />
+					<BuatProfil />
+				</div>
+			</Wrapper>
 		</Layout>
 	);
 }

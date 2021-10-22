@@ -55,7 +55,7 @@ export const Wrapper = styled.div`
 		/* border: dashed 1px black; */
 	}
 	.dashboard-main {
-		width: 1240px;
+		width: 1366px;
 	}
 
 	.border {

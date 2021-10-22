@@ -9,18 +9,17 @@ import backgroundImage from '../../../../assets/images/background-image-first-di
 
 export const Wrapper = styled.div`
 	width: 100%;
-	height: 125vh;
 	background-image: url('${backgroundImage}');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	padding: 200px 60px;
+	padding: 120px 60px 240px;
 
-	/* @media (max-width: ${S_DEVICES_WIDTH}) {
-		.klob-navbar {
-			height: 3rem;
-		}
-	} */
+	@media (max-width: ${S_DEVICES_WIDTH}) {
+		background-position: right;
+		padding: 120px 30px;
+		width: 90%;
+	}
 `;
 
 export const TitleDiv = styled.div`
@@ -35,9 +34,15 @@ export const TitleDiv = styled.div`
 		height: 50px;
 	}
 
-	/* @media (max-width: ${S_DEVICES_WIDTH}) {
-    .klob-navbar {
-        height: 3rem;
-    }
-} */
+	@media (max-width: ${S_DEVICES_WIDTH}) {
+		width: 200px;
+
+		img {
+			height: 30px;
+		}
+
+		.appstore {
+			height: 22px;
+		}
+	}
 `;

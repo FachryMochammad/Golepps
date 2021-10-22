@@ -9,6 +9,7 @@ export const Wrapper = styled.button`
 	text-align: center;
 	line-height: 1.28;
 	color: #ffffff;
+	background-color: transparent;
 	cursor: pointer;
 	padding: 8px 30px;
 	border-color: transparent;
@@ -75,7 +76,6 @@ export const Wrapper = styled.button`
 		css`
 			background-color: ${theme.color.lightGray};
 			color: ${theme.color.darkSlateBlue};
-			/* box-shadow: 3px 4px 6px 0 rgba(216, 84, 72, 0.5); */
 		`}
 
   ${({ xLarge }) =>
@@ -118,7 +118,7 @@ export const Wrapper = styled.button`
 		full &&
 		css`
 			width: 100%;
-			height: 100%;
+			height: 53px;
 			justify-content: center;
 			align-items: center;
 		`}
@@ -132,7 +132,7 @@ export const Wrapper = styled.button`
   ${({ squareRight }) =>
 		squareRight &&
 		css`
-			border-radius: 0px 4px 4px 0px;
+			border-radius: 0px 30px 30px 0px;
 		`}
 
   ${({ squareLeft }) =>

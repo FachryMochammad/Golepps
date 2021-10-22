@@ -11,6 +11,12 @@ const H2Style = styled.h2`
 	font-family: Montserrat;
 	margin: 0;
 
+	${({ darkGreen }) =>
+		darkGreen &&
+		css`
+			color: ${theme.color.darkGreen};
+		`}
+
 	${({ darkSlateBlue }) =>
 		darkSlateBlue &&
 		css`

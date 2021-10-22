@@ -3,12 +3,11 @@ import LoaderGlobal from '../components/Loader/LoaderGlobal';
 import { useSelector, useDispatch } from 'react-redux';
 import { Toaster } from 'react-hot-toast';
 import SEO from '../seo/SEO';
-
+import ErrorMobile from '../components/Errors/ErrorMobile/ErrorMobile';
+import { HideLgShowSm, ShowLgHideSm } from '../layouts/Responsive/Responsive';
 import NavBar from '../components/NavBar/NavBar';
 import Footer from '../components/Footer';
-
 import ErrorLostConnection from '../components/Errors/ErrorLostConnection/ErrorLostConnection';
-
 import { Wrapper } from './styles';
 
 export default function Layout({ children, hideNavbar, pageMeta }) {
@@ -52,8 +51,16 @@ export default function Layout({ children, hideNavbar, pageMeta }) {
 				image={pageMeta?.image}
 			/>
 			{!hideNavbar && <NavBar />}
-			<main>{children}</main>
-			<Footer />
+			<ShowLgHideSm>
+				<div className="dashboard-main">
+					<main>{children}</main>
+					<Footer />
+				</div>
+			</ShowLgHideSm>
+
+			<HideLgShowSm>
+				<ErrorMobile />
+			</HideLgShowSm>
 		</Wrapper>
 	);
 }

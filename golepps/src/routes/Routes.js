@@ -9,6 +9,9 @@ const Dashboard = lazy(() => import('../pages/Dashboard/Dashboard'));
 const FindGolfCourse = lazy(() =>
 	import('../pages/FindGolfCourse/FindGolfCourse')
 );
+const DetailGolfCourse = lazy(() =>
+	import('../pages/DetailGolfCourse/DetailGolfCourse')
+);
 const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
 
 function Routes({ childProps }) {
@@ -28,6 +31,12 @@ function Routes({ childProps }) {
 					exact
 					path="/find-golf-course"
 					component={FindGolfCourse}
+					props={childProps}
+				/>
+				<Route
+					exact
+					path="/find-golf-course/detail/:id"
+					component={DetailGolfCourse}
 					props={childProps}
 				/>
 				<Route render={(props) => <NotFound {...props} />} />

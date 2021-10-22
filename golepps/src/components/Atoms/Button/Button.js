@@ -33,20 +33,10 @@ function Button({
 		>
 			{children}
 			{arrowRight && (
-				<FontAwesomeIcon
-					className="ms-2"
-					size="sm"
-					// color="#ffffff"
-					icon={faChevronRight}
-				/>
+				<FontAwesomeIcon className="ms-2" size="sm" icon={faChevronRight} />
 			)}
 			{arrowRightMobile && (
-				<FontAwesomeIcon
-					className="ms-4"
-					size="sm"
-					// color="#ffffff"
-					icon={faChevronRight}
-				/>
+				<FontAwesomeIcon className="ms-4" size="sm" icon={faChevronRight} />
 			)}
 			{arrowLeft && <FontAwesomeIcon size="1x" icon={faArrowLeft} />}
 			{arrowDown && <FontAwesomeIcon size="1x" icon={faArrowDown} />}

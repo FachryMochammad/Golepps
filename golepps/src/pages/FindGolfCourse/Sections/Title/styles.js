@@ -9,10 +9,10 @@ import backgroundImage from '../../../../assets/images/background-image-2.png';
 
 export const Wrapper = styled.div`
 	width: 100%;
-	height: 125vh;
+	padding: 200px 60px;
 	background-image: url('${backgroundImage}');
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: top;
 	background-size: cover;
 	display: flex;
 	justify-content: center;

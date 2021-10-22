@@ -55,6 +55,9 @@ export const Menu = styled.div`
 	margin-top: 35px;
 	left: 0px;
 	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	overflow: hidden;
 	height: 0;
@@ -64,13 +67,13 @@ export const Menu = styled.div`
 	${({ visible }) =>
 		visible &&
 		css`
-			height: 100vh;
+			height: 100%;
 			transition: all 0.25s ease-in;
 		`}
 `;
 
 export const MenuPadding = styled.div`
-	padding: 16px 23px;
+	padding: 20px 23px;
 `;
 
 export const LineVertical = styled.div`
@@ -83,12 +86,15 @@ export const LineVertical = styled.div`
 export const ProgramDiv = styled.div`
 	display: flex;
 	padding: 7px 0px;
-	color: ${theme.color.darkSlateBlue};
+
+	h1 {
+		color: black;
+	}
 
 	${({ active }) =>
 		active &&
 		css`
-			border-bottom: solid 3px ${theme.color.cinnabar};
+			border-bottom: solid 3px ${theme.color.darkGreen};
 			font-weight: bold;
 		`}
 `;

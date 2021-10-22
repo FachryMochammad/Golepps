@@ -29,6 +29,7 @@ const theme = {
 		blueKlob: '#27356a',
 		veryLightBlue: '#edf1ff',
 		darkGreen: '#1A7E5A',
+		gray: '#707070',
 	},
 };
 

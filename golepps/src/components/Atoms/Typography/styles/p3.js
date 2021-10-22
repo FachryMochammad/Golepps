@@ -13,6 +13,12 @@ const P3Style = styled.p`
 	line-height: 1.58;
 	letter-spacing: normal;
 
+	${({ gray }) =>
+		gray &&
+		css`
+			color: ${theme.color.gray};
+		`}
+
 	${({ darkGreen }) =>
 		darkGreen &&
 		css`
