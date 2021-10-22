@@ -26,7 +26,7 @@ function FindGolfCourse() {
 			getAction({ url: pathListGolfCourse })
 				.then(({ data }) => {
 					dispatch({ type: 'SET_LIST_GOLF_COURSE', data: data });
-					setError(true);
+					setError(false);
 				})
 				.catch((err) => {
 					console.log(err);
