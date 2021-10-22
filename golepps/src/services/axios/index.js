@@ -1,7 +1,7 @@
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-const serviceHost = 'https://167.172.78.242:8000';
+const serviceHost = 'http://167.172.78.242:8000';
 const apiClient = axios.create({
 	baseURL: `${serviceHost}`,
 });
